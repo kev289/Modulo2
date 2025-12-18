@@ -1,0 +1,370 @@
+/* =========================
+   BASE
+========================= */
+body {
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    max-width: 100%;
+    background-image: url("./assets/images/bg-pattern-intro-desktop.svg"),
+        linear-gradient(135deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-repeat: no-repeat;
+    background-position: left, center;
+    background-size: 180%, cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.1);
+    padding-bottom: 100px;
+}
+
+.header h1 {
+    margin: 0;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+}
+
+.header p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.navbar__left {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.navbar__left h2 {
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+
+.navbar__left ul {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar__left li {
+    list-style: none;
+}
+
+.navbar__left__a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.navbar__right {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.navbar__right__login {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.navbar__right__singup {
+    padding: 12px 40px;
+    background-color: white;
+    color: #e45656;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn:hover .arrow {
+    transform: rotate(-135deg);
+}
+
+/* =========================
+   HEADER BUTTONS
+========================= */
+.navbar__low {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.navbar__low__left {
+    text-decoration: none;
+    color: #e45656;
+    padding: 12px 40px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.navbar__low__right {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 12px 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+/* =========================
+   MAIN / ARTICLE
+========================= */
+
+main h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 150px;
+    font-weight: bold;
+    color: hsl(208, 49%, 24%);
+}
+
+.article1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.article1__left {
+    width: 35%;
+}
+
+.article1__left__h3 {
+    font-size: 30px;
+    color: hsl(208, 49%, 24%);
+}
+
+.text {
+    color: hsl(207, 13%, 34%);
+}
+
+.article1__right {
+    width: 60%;
+    overflow: hidden;
+}
+
+.article1__right__img {
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .article1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .article1__left {
+        width: 90%;
+    }
+
+    .article1__right {
+        width: 100%;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 36px;
+        padding: 0 20px;
+    }
+
+    .header p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navbar__left,
+    .navbar__right {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .navbar__left ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .navbar__low {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    main h2 {
+        font-size: 24px;
+        margin-top: 80px;
+    }
+
+    .article1__left__h3 {
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
